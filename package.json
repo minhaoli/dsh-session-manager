@@ -1,0 +1,44 @@
+{
+  "name": "dsh-session-manager",
+  "version": "0.1.0",
+  "description": "Agent tools and a loopback REST API for DSH session housekeeping: list, move across workspaces, delete with backup, tag, archive and unarchive.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session-management",
+    "tags"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhaoli/dsh-session-manager.git"
+  },
+  "homepage": "https://github.com/minhaoli/dsh-session-manager#readme",
+  "bugs": {
+    "url": "https://github.com/minhaoli/dsh-session-manager/issues"
+  },
+  "author": "haomin li"
+}

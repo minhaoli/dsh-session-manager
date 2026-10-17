@@ -1,0 +1,9 @@
+# dsh-session-manager bundle patch: one plugin row mounting both surfaces.
+#
+# The plugin is a single host-side entry (`lib/index.js`, default export `apply`).
+# It registers six agent tools and, when the `webServer` service is present, a
+# same-origin REST API under /api/dsh-session-manager/ so a browser plugin
+# (dsh-session-tree) can read and write the same state without an IPC bridge.
+- insert:
+    - id: session-manager
+      name: 'dsh-session-manager'
